@@ -32,6 +32,9 @@
                     <a href="#about" class="nav-link">About</a>
                 </li>
                 <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
                     <a href="#projects" class="nav-link">Projects</a>
                 </li>
                 <li class="nav-item">
@@ -162,6 +165,53 @@
         </div>
     </section>
 
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-line"></div>
+                
+                <!-- Experience 1 - Right side -->
+                <div class="timeline-item right" data-year="2025">
+                    <div class="timeline-content glass tactile">
+                        <div class="timeline-year">2025</div>
+                        <h3 class="experience-title">Full Stack Developer (Intern)</h3>
+                        <h4 class="company-name">Asraaz Business Solutions</h4>
+                        <p class="experience-description">
+                            Developed diverse, responsive web solutions for various clients, creating platforms for travel booking, eCommerce, and professional Dashboard/ERP portal. (Jan - July)
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">HTML, CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">PostgreSql</span>
+                        </div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <!-- Experience 2 - Left side -->
+                <div class="timeline-item left" data-year="2024">
+                    <div class="timeline-content glass tactile">
+                        <div class="timeline-year">2024</div>
+                        <h3 class="experience-title">ML Internship Trainee</h3>
+                        <h4 class="company-name">NSIC</h4>
+                        <p class="experience-description">
+                           I learned to apply machine learning techniques using Python, TensorFlow, and Scikit-learn to build, train, and deploy predictive models from complex datasets.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">PyTorch</span>
+                        </div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
@@ -237,17 +287,9 @@
                     <div class="project-preview">
                         <!-- New Slideshow Approach -->
                         <div class="slideshow-container">
-                            <!-- Slideshow Navigation Dots -->
-                            <div class="slideshow-dots">
-                                <span class="dot active" onclick="currentSlide(1)"></span>
-                                <span class="dot" onclick="currentSlide(2)"></span>
-                                <span class="dot" onclick="currentSlide(3)"></span>
-                                <span class="dot" onclick="currentSlide(4)"></span>
-                            </div>
-                            
                             <!-- Slide Images with Fallback -->
                             <div class="slides-wrapper">
-                                <div class="slide-item active" data-slide="1">
+                                <div class="slide-item" data-slide="1">
                                     <div class="project-visual">
                                         <img src="images/img1.jpeg" alt="Smart Notes AI - Interface" class="slide-image">
                                     </div>
@@ -271,14 +313,6 @@
                                     </div>
                                 </div>
                             </div>
-                            
-                            <!-- Navigation Arrows -->
-                            <button class="prev-btn" onclick="plusSlides(-1)">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="next-btn" onclick="plusSlides(1)">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
                         </div>
                     </div>
                     <div class="project-info glass">
@@ -314,17 +348,9 @@ stack applications like a Zoo Management System and Admin Panel with Node.js and
                     <div class="project-preview">
                         <!-- Recipe Generator Slideshow -->
                         <div class="slideshow-container" id="slideshow-2">
-                            <!-- Slideshow Navigation Dots -->
-                            <div class="slideshow-dots">
-                                <span class="dot active" onclick="currentSlide2(1)"></span>
-                                <span class="dot" onclick="currentSlide2(2)"></span>
-                                <span class="dot" onclick="currentSlide2(3)"></span>
-                                <span class="dot" onclick="currentSlide2(4)"></span>
-                            </div>
-                            
                             <!-- Slide Images -->
                             <div class="slides-wrapper">
-                                <div class="slide-item active" data-slide="1">
+                                <div class="slide-item" data-slide="1">
                                     <div class="project-visual">
                                         <img src="images/img5.png" alt="Recipe Generator - Interface" class="slide-image">
                                     </div>
@@ -348,14 +374,6 @@ stack applications like a Zoo Management System and Admin Panel with Node.js and
                                     </div>
                                 </div>
                             </div>
-                            
-                            <!-- Navigation Arrows -->
-                            <button class="prev-btn" onclick="plusSlides2(-1)">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="next-btn" onclick="plusSlides2(1)">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -402,7 +420,7 @@ stack applications like a Zoo Management System and Admin Panel with Node.js and
                 <!-- X (Twitter) Card -->
                 <div class="social-card glass tactile">
                     <div class="social-icon twitter">
-                        <i class="fab fa-x-twitter"></i>
+                        <img src="images/x.jpg" alt="X Logo" class="x-logo">
                     </div>
                     <h3>X</h3>
                     <p>Follow me on X</p>
@@ -434,7 +452,7 @@ stack applications like a Zoo Management System and Admin Panel with Node.js and
                     <div class="social-links">
                         <a href="https://github.com/Dineshk4rthick" target="_blank" class="social-link tactile"><i class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/dinesh-karthick-459b5a258/" target="_blank" class="social-link tactile"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://x.com/Dineshk4rthick" target="_blank" class="social-link tactile"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://x.com/Dineshk4rthick" target="_blank" class="social-link tactile x-social-link"><img src="images/x.jpg" alt="X Logo" class="x-logo-small"></a>
                         <a href="mailto:dk4579@srmist.edu.in" class="social-link tactile"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>

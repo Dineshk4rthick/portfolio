@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeNavigation();
     initializeScrollEffects();
     initializeAnimations();
+    initializeTimelineAnimations();
     initializeForm();
     initializeTactileEffects();
     initializeParallax();
@@ -148,6 +149,88 @@ function initializeAnimations() {
             }, index * 100);
         });
     }, 500);
+}
+
+// Timeline animations
+function initializeTimelineAnimations() {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    const timelineLine = document.querySelector('.timeline-line');
+    
+    // Intersection Observer for timeline items
+    const timelineObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add a small delay for staggered effect when entering
+                const index = Array.from(timelineItems).indexOf(entry.target);
+                setTimeout(() => {
+                    entry.target.classList.add('animate');
+                }, index * 300);
+            } else {
+                // Remove animation when leaving viewport (scrolling up)
+                entry.target.classList.remove('animate');
+            }
+        });
+    }, {
+        threshold: 0.2,
+        rootMargin: '0px 0px -100px 0px'
+    });
+    
+    // Observe all timeline items
+    timelineItems.forEach(item => {
+        timelineObserver.observe(item);
+    });
+    
+    // Fallback scroll listener for additional animation control
+    function handleTimelineScroll() {
+        const experienceSection = document.querySelector('.experience');
+        if (experienceSection) {
+            const sectionTop = experienceSection.getBoundingClientRect().top;
+            const sectionHeight = experienceSection.offsetHeight;
+            const windowHeight = window.innerHeight;
+            
+            // Animate timeline line based on scroll
+            if (sectionTop < windowHeight && sectionTop > -sectionHeight) {
+                if (timelineLine) {
+                    timelineLine.style.animationPlayState = 'running';
+                }
+                
+                // Check each timeline item
+                timelineItems.forEach((item, index) => {
+                    const itemTop = item.getBoundingClientRect().top;
+                    const itemBottom = item.getBoundingClientRect().bottom;
+                    
+                    // Show when entering viewport from bottom
+                    if (itemTop < windowHeight * 0.8 && itemBottom > 0) {
+                        if (!item.classList.contains('animate')) {
+                            setTimeout(() => {
+                                item.classList.add('animate');
+                            }, index * 200);
+                        }
+                    } 
+                    // Hide when leaving viewport from top
+                    else if (itemBottom < windowHeight * 0.2 || itemTop > windowHeight) {
+                        item.classList.remove('animate');
+                    }
+                });
+            } else {
+                // Hide all items when section is completely out of view
+                timelineItems.forEach(item => {
+                    item.classList.remove('animate');
+                });
+                
+                // Reset timeline line animation
+                if (timelineLine) {
+                    timelineLine.style.animationPlayState = 'paused';
+                }
+            }
+        }
+    }
+    
+    // Add scroll listener
+    window.addEventListener('scroll', handleTimelineScroll);
+    
+    // Initial check in case elements are already in view
+    setTimeout(handleTimelineScroll, 100);
 }
 
 // Enhanced tactile effects
@@ -483,104 +566,32 @@ let slideIndex = 1;
 let slideIndex2 = 1; // For second slideshow
 
 function initializeSlideshow() {
-    console.log('Initializing enhanced slideshow...');
-    showSlide(slideIndex);
-    showSlide2(slideIndex2); // Initialize second slideshow
-    
-    // Auto-advance slides every 4 seconds
-    setInterval(function() {
-        plusSlides(1);
-    }, 4000);
-    
-    // Auto-advance second slideshow every 4.5 seconds (slightly offset)
-    setInterval(function() {
-        plusSlides2(1);
-    }, 4500);
-    
-    console.log('Slideshow initialized with auto-advance');
+    console.log('Initializing CSS-based slideshow...');
+    // Pure CSS animation - no JavaScript needed for sliding
+    console.log('Slideshow running with CSS animations');
 }
 
 function plusSlides(n) {
-    showSlide(slideIndex += n);
+    // CSS animation handles sliding
 }
 
 function currentSlide(n) {
-    showSlide(slideIndex = n);
+    // CSS animation handles sliding
 }
 
 // Functions for second slideshow
 function plusSlides2(n) {
-    showSlide2(slideIndex2 += n);
+    // CSS animation handles sliding
 }
 
 function currentSlide2(n) {
-    showSlide2(slideIndex2 = n);
+    // CSS animation handles sliding
 }
 
 function showSlide(n) {
-    const slides = document.querySelectorAll('.slideshow-container:not(#slideshow-2) .slide-item');
-    const dots = document.querySelectorAll('.slideshow-container:not(#slideshow-2) .dot');
-    
-    if (slides.length === 0) {
-        console.log('No slides found for first slideshow');
-        return;
-    }
-    
-    if (n > slides.length) { slideIndex = 1; }
-    if (n < 1) { slideIndex = slides.length; }
-    
-    // Hide all slides
-    slides.forEach(slide => {
-        slide.classList.remove('active');
-    });
-    
-    // Remove active class from all dots
-    dots.forEach(dot => {
-        dot.classList.remove('active');
-    });
-    
-    // Show current slide and activate corresponding dot
-    if (slides[slideIndex - 1]) {
-        slides[slideIndex - 1].classList.add('active');
-    }
-    
-    if (dots[slideIndex - 1]) {
-        dots[slideIndex - 1].classList.add('active');
-    }
-    
-    console.log('Showing slide:', slideIndex);
+    // CSS animation handles sliding - no JavaScript needed
 }
 
 function showSlide2(n) {
-    const slides = document.querySelectorAll('#slideshow-2 .slide-item');
-    const dots = document.querySelectorAll('#slideshow-2 .dot');
-    
-    if (slides.length === 0) {
-        console.log('No slides found for second slideshow');
-        return;
-    }
-    
-    if (n > slides.length) { slideIndex2 = 1; }
-    if (n < 1) { slideIndex2 = slides.length; }
-    
-    // Hide all slides
-    slides.forEach(slide => {
-        slide.classList.remove('active');
-    });
-    
-    // Remove active class from all dots
-    dots.forEach(dot => {
-        dot.classList.remove('active');
-    });
-    
-    // Show current slide and activate corresponding dot
-    if (slides[slideIndex2 - 1]) {
-        slides[slideIndex2 - 1].classList.add('active');
-    }
-    
-    if (dots[slideIndex2 - 1]) {
-        dots[slideIndex2 - 1].classList.add('active');
-    }
-    
-    console.log('Showing slide 2:', slideIndex2);
+    // CSS animation handles sliding - no JavaScript needed
 }
