@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinesh Karthick - CS Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="bg-elements">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="floating-shape shape-4"></div>
+        <div class="floating-shape shape-5"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Dinesh Karthick</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content glass">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">Hello, I'm</span>
+                        <span class="title-name">Dinesh Karthick</span>
+                        <span class="title-role">Computer Science Student</span>
+                    </h1>
+                    <p class="hero-description">
+                        Passionate Computer Science Engineering student at SRMIST with skills in Web development, Agentic AI, 
+                        Python, UI/UX. Tech enthusiast passionate about solving problems and building impactful projects.
+                        Driven to create meaningful solutions in dynamic environments.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="dk.pdf" target="_blank" class="btn-primary tactile">
+                            <i class="fas fa-file-pdf"></i>
+                            View My Resume
+                        </a>
+                        <button class="btn-secondary tactile" onclick="scrollToSection('contact')">
+                            <i class="fas fa-envelope"></i>
+                            Get In Touch
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-image-container">
+                        <div class="profile-image glass">
+                            <img src="images/profile.jpg" alt="Dinesh Karthick" class="profile-photo">
+                        </div>
+                        <div class="floating-tech tech-1">
+                            <i class="fab fa-js-square"></i>
+                        </div>
+                        <div class="floating-tech tech-2">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="floating-tech tech-3">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <div class="floating-tech tech-4">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text glass tactile">
+                    <h3>Who Am I?</h3>
+                    <p>
+                        I'm a passionate Computer Science Engineering student at SRMIST with skills in Web development, 
+                        Agentic AI, Python, and UI/UX. As a tech enthusiast, I'm passionate about solving problems and 
+                        building impactful projects that make a difference.
+                    </p>
+                    <p>
+                        Driven to create meaningful solutions in dynamic environments, I believe in leveraging technology 
+                        to solve real-world challenges. My journey involves exploring cutting-edge technologies and 
+                        developing solutions that create lasting impact.
+                    </p>
+                    <div class="stats">
+                        <div class="stat-item glass">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat-item glass">
+                            <div class="stat-number">3+</div>
+                            <div class="stat-label">Years Learning</div>
+                        </div>
+                        <div class="stat-item glass">
+                            <div class="stat-number">8+</div>
+                            <div class="stat-label">Technologies</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="code-snippet glass tactile">
+                        <div class="code-header">
+                            <div class="dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <span>about-me.js</span>
+                        </div>
+                        <div class="code-content">
+                            <pre><code><span class="keyword">const</span> <span class="variable">aboutMe</span> = {
+  <span class="property">name</span>: <span class="string">"Dinesh Karthick"</span>,
+  <span class="property">role</span>: <span class="string">"CS Student"</span>,
+  <span class="property">location</span>: <span class="string">"Chennai,India"</span>,
+  <span class="property">interests</span>: [
+    <span class="string">"Web Development"</span>,
+    <span class="string">"Machine Learning"</span>,
+    <span class="string">"Agentic Ai"</span>
+    
+  ],
+  <span class="property">currentlyLearning</span>: <span class="string">"Machine Learning, Deep Learning
+    and Neural Networks"</span>,
+
+};</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category glass tactile">
+                    <div class="category-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Programming Languages</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">TypeScript</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category glass tactile">
+                    <div class="category-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">Javascript</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">PostgreSql</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category glass tactile">
+                    <div class="category-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI/ML & Data Analytics</h3>
+                    <div class="skill-items">
+                        
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        
+                    </div>
+                </div>
+                
+                <div class="skill-category glass tactile">
+                    <div class="category-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Tools & Platforms</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Pycharm</span>
+                        <span class="skill-tag">n8n</span>
+                        <span class="skill-tag">VS Code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                
+                <!-- Project 1: Smart Notes AI -->
+                <div class="project-showcase">
+                    <div class="project-preview">
+                        <!-- New Slideshow Approach -->
+                        <div class="slideshow-container">
+                            <!-- Slideshow Navigation Dots -->
+                            <div class="slideshow-dots">
+                                <span class="dot active" onclick="currentSlide(1)"></span>
+                                <span class="dot" onclick="currentSlide(2)"></span>
+                                <span class="dot" onclick="currentSlide(3)"></span>
+                                <span class="dot" onclick="currentSlide(4)"></span>
+                            </div>
+                            
+                            <!-- Slide Images with Fallback -->
+                            <div class="slides-wrapper">
+                                <div class="slide-item active" data-slide="1">
+                                    <div class="project-visual">
+                                        <img src="images/img1.jpeg" alt="Smart Notes AI - Interface" class="slide-image">
+                                    </div>
+                                </div>
+                                
+                                <div class="slide-item" data-slide="2">
+                                    <div class="project-visual">
+                                        <img src="images/img2.jpeg" alt="Smart Notes AI - Features" class="slide-image">
+                                    </div>
+                                </div>
+                                
+                                <div class="slide-item" data-slide="3">
+                                    <div class="project-visual">
+                                        <img src="images/img3.jpeg" alt="Smart Notes AI - Results" class="slide-image">
+                                    </div>
+                                </div>
+                                
+                                <div class="slide-item" data-slide="4">
+                                    <div class="project-visual">
+                                        <img src="images/img4.jpeg" alt="Smart Notes AI - Dashboard" class="slide-image">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Navigation Arrows -->
+                            <button class="prev-btn" onclick="plusSlides(-1)">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="next-btn" onclick="plusSlides(1)">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info glass">
+                        <h3> AI-Powered WhatsApp Metro Ticket Booking</h3>
+                        <p> Developed an automated WhatsApp bot using n8n, Python (Flask, Whisper), and Twilio to enable metro ticket booking
+ via text or “voice messages”.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">n8n</span>
+                            <span class="tech-tag">Python(Flask)</span>
+                            <span class="tech-tag">OpenAI Whisper</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/Dineshk4rthick/ai-prowered-whatsapp-metro-ticket-booking" target="_blank" class="btn-view-code">View Code</a>
+                            <a href="https://github.com/Dineshk4rthick/ai-prowered-whatsapp-metro-ticket-booking" target="_blank" class="btn-live-demo">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Recipe Generator -->
+                <div class="project-showcase reverse">
+                    <div class="project-info glass">
+                        <h3>Web & Full-Stack Development Projects</h3>
+                        <p> Built multiple responsive websites HTML, CSS, JavaScript, React, and TypeScript during internship. Developed full
+stack applications like a Zoo Management System and Admin Panel with Node.js and PostgreSQL, implementing
+ RESTful APIs, authentication, and CRUD operations</p>
+                        
+                        <div class="project-actions">
+                            <a href="https://github.com/Dineshk4rthick" target="_blank" class="btn-view-code">View Code</a>
+                            <a href="https://github.com/Dineshk4rthick" target="_blank" class="btn-live-demo">Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-preview">
+                        <!-- Recipe Generator Slideshow -->
+                        <div class="slideshow-container" id="slideshow-2">
+                            <!-- Slideshow Navigation Dots -->
+                            <div class="slideshow-dots">
+                                <span class="dot active" onclick="currentSlide2(1)"></span>
+                                <span class="dot" onclick="currentSlide2(2)"></span>
+                                <span class="dot" onclick="currentSlide2(3)"></span>
+                                <span class="dot" onclick="currentSlide2(4)"></span>
+                            </div>
+                            
+                            <!-- Slide Images -->
+                            <div class="slides-wrapper">
+                                <div class="slide-item active" data-slide="1">
+                                    <div class="project-visual">
+                                        <img src="images/img5.png" alt="Recipe Generator - Interface" class="slide-image">
+                                    </div>
+                                </div>
+                                
+                                <div class="slide-item" data-slide="2">
+                                    <div class="project-visual">
+                                        <img src="images/img6.png" alt="Recipe Generator - Features" class="slide-image">
+                                    </div>
+                                </div>
+                                
+                                <div class="slide-item" data-slide="3">
+                                    <div class="project-visual">
+                                        <img src="images/img7.png" alt="Recipe Generator - Results" class="slide-image">
+                                    </div>
+                                </div>
+                                
+                                <div class="slide-item" data-slide="4">
+                                    <div class="project-visual">
+                                        <img src="images/img8.png" alt="Recipe Generator - Dashboard" class="slide-image">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Navigation Arrows -->
+                            <button class="prev-btn" onclick="plusSlides2(-1)">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="next-btn" onclick="plusSlides2(1)">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="social-cards-grid">
+                <!-- LinkedIn Card -->
+                <div class="social-card glass tactile">
+                    <div class="social-icon linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <p>Connect with me professionally</p>
+                    <a href="https://www.linkedin.com/in/dinesh-karthick-459b5a258/" target="_blank" class="social-btn">Connect</a>
+                </div>
+
+                <!-- GitHub Card -->
+                <div class="social-card glass tactile">
+                    <div class="social-icon github">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>GitHub</h3>
+                    <p>Check out my code repositories</p>
+                    <a href="https://github.com/Dineshk4rthick" target="_blank" class="social-btn">Follow</a>
+                </div>
+
+                <!-- Email Card -->
+                <div class="social-card glass tactile">
+                    <div class="social-icon email">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>Drop me a message anytime</p>
+                    <a href="mailto:dk4579@srmist.edu.in" class="social-btn">Message</a>
+                </div>
+
+                <!-- X (Twitter) Card -->
+                <div class="social-card glass tactile">
+                    <div class="social-icon twitter">
+                        <i class="fab fa-x-twitter"></i>
+                    </div>
+                    <h3>X</h3>
+                    <p>Follow me on X</p>
+                    <a href="https://x.com/Dineshk4rthick" target="_blank" class="social-btn">Follow</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Dinesh Karthick</h3>
+                    <p>Passionate Computer Science Engineering student at SRMIST with skills in Web development, Agentic AI, Python, UI/UX. Driven to create meaningful solutions in dynamic environments.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/Dineshk4rthick" target="_blank" class="social-link tactile"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/dinesh-karthick-459b5a258/" target="_blank" class="social-link tactile"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/Dineshk4rthick" target="_blank" class="social-link tactile"><i class="fab fa-x-twitter"></i></a>
+                        <a href="mailto:dk4579@srmist.edu.in" class="social-link tactile"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
